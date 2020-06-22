@@ -13,12 +13,24 @@ jobs:
       - name: 📂 setup
         uses: actions/checkout@v2
 
+
+      - name: Build jekyll
+        run: |
+          docker run --rm \
+          --volume="${{ github.workspace }}:/workspace" \
+          jekyll/builder:3.8.5 \
+          /bin/bash -c "gem install bundler && chmod -R 777 /workspace && jekyll build"
+
+      # - name: 💎 setup ruby
+      #   uses: ruby/setup-ruby@v1
+      #   with:
+      #     ruby-version: 2.7 # can change this to 2.7 or whatever version you prefer
       # - name: Make workspace writable
       #   run:  chmod -R a+w /github/workspace
 
-      - name: Build jekyll
-        working-directory: www
-        run: jekyll build --trace
+      # - name: Build jekyll
+      #   working-directory: www
+      #   run: jekyll build --trace
 
       # - name: Build
       #   uses: jerryjvl/jekyll-build-action@v1
@@ -28,10 +40,6 @@ jobs:
       #  # however this may be very slow for large repositories!
       #  # with:
       #  # fetch-depth: '0'
-      #- name: 💎 setup ruby
-      #  uses: ruby/setup-ruby@v1
-      #  with:
-      #    ruby-version: 2.7 # can change this to 2.7 or whatever version you prefer
 
       #- name: 🔨 install dependencies & build site
       #  uses: limjh16/jekyll-action-ts@v2
