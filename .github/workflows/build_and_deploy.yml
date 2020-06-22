@@ -33,11 +33,10 @@ jobs:
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/_site/
-          args: >-
-            --dry-run
+          git-ftp-args: >-
             --verbose
             --parallel=4
-            --remote-root=www
+            --remote-root=public_html
 
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
