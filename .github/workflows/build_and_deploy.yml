@@ -10,10 +10,10 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
-      - name: 📂 setup
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Build Jekyll Site
+      - name: Build Jekyll site
         run: |
           docker run --rm \
           --volume="${{ github.workspace }}/www:/srv/jekyll" \
@@ -27,7 +27,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/_site/
           args: >-
