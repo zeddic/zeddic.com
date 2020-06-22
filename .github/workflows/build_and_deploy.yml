@@ -23,6 +23,9 @@ jobs:
 
       - name: Verify site was built
         run: ls www/_site
+        
+      - name: Verify site was built in src
+        run: cat www/_site/index.html
 
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
