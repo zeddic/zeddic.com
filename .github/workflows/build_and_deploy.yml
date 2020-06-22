@@ -29,12 +29,11 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-server: ftp://ftp.zeddic.com.com/public_html/
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/_site/
           git-ftp-args: >-
-            --remote-root "public_html/""
             --verbose
 
       # - name: 💎 setup ruby
