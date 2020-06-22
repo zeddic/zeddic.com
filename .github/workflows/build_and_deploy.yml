@@ -34,8 +34,8 @@ jobs:
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/_site/
           git-ftp-args: >-
-            --verbose
             --remote-root public_html/
+            --verbose
 
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
