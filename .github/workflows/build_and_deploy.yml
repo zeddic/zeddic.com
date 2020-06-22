@@ -32,7 +32,7 @@ jobs:
           ftp-server: ftp://ftp.zeddic.com/public_html/
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./www/_site/
+          local-dir: www/_site/
           git-ftp-args: >-
             --verbose
 
