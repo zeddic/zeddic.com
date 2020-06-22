@@ -8,7 +8,7 @@ email: scott@zeddic.com
 # description: >- # this means to ignore newlines until "baseurl:"
 #  The personal website of Scott Bailey
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://zeddic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://zeddic.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: zeddic
 

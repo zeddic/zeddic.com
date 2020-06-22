@@ -1,0 +1,14 @@
+RewriteEngine on
+
+ErrorDocument 404 /404.html
+
+# Serves html files w/o the extension
+RewriteCond %{REQUEST_FILENAME} !-d                   # Not a directory
+RewriteCond %{REQUEST_FILENAME}.html -f               # is an existing html file
+RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]   # forward to html file
+
+# Redirects domain.com/file.html to domain.com/file
+RewriteCond %{REQUEST_FILENAME} !-d          # is not directory
+RewriteCond %{REQUEST_FILENAME}\.html -f     # is an existing html file
+RewriteCond %{REQUEST_URI} ^(.+)\.html$      # request URI ends with .html
+RewriteRule (.*)\.html$ /$1 [R=301,L]        # redirect from index.html to index
