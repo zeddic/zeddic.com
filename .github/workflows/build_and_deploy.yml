@@ -17,9 +17,9 @@ jobs:
       - name: Build jekyll
         run: |
           docker run --rm \
-          --volume="${{ github.workspace }}:/workspace" \
+          --volume="${{ github.workspace }}/www:/srv/jekyll" \
           jekyll/builder:3.8.5 \
-          /bin/bash -c "gem install bundler && chmod -R 777 /workspace && jekyll build"
+          /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build"
 
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
