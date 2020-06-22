@@ -21,6 +21,9 @@ jobs:
           jekyll/builder:3.8.5 \
           /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build"
 
+      - name: Verify site was built
+        run: ls www/_site
+
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
       #   with:
