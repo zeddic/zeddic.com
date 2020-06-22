@@ -18,7 +18,7 @@ jobs:
           docker run --rm \
           --volume="${{ github.workspace }}/www:/srv/jekyll" \
           jekyll/builder:3.8.5 \
-          /bin/bash -c "gem install bundler && jekyll build"
+          /bin/bash -c "gem install bundler && chmod a+w /srv/jekyll && jekyll build"
 
       - name: Verify built output
         run: find www/_site/ -print
