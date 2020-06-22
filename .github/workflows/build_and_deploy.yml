@@ -35,7 +35,7 @@ jobs:
           local-dir: ./www/_site/
           git-ftp-args: >-
             --verbose
-            --remote-root=public_html
+            --remote-root public_html/
 
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
