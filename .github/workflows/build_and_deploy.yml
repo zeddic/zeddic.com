@@ -13,19 +13,28 @@ jobs:
       - name: 📂 setup
         uses: actions/checkout@v2
 
-
-      - name: Build jekyll
+      - name: Build Jekyll Site
         run: |
           docker run --rm \
           --volume="${{ github.workspace }}/www:/srv/jekyll" \
           jekyll/builder:3.8.5 \
           /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build"
 
-      - name: Verify site was built
-        run: ls www/_site
+      - name: Verify built output
+        run: find www/_site/ -print
         
-      - name: Verify site was built in src
-        run: cat www/_site/index.html
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USER }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./www/_site/
+          args: >-
+            --dry-run
+            --verbose
+            --parallel=4
+            --remote-root=www
 
       # - name: 💎 setup ruby
       #   uses: ruby/setup-ruby@v1
