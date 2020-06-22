@@ -13,10 +13,10 @@ jobs:
       - name: 📂 setup
         uses: actions/checkout@v2
 
-      - name: Make workspace writable
-        run:  chmod -R a+w /github/workspace
+      # - name: Make workspace writable
+      #   run:  chmod -R a+w /github/workspace
 
-      - name: Make workspace writable
+      - name: Build jekyll
         working-directory: www
         run: jekyll build --trace
 
