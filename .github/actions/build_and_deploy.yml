@@ -17,7 +17,8 @@ jobs:
         with:
           node-version: "12"
 
-      - run: npm install
+      - name: setup
+        run: npm install
         working-directory: www
 
       - name: build
