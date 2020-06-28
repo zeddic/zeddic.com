@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  jekyll:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,22 +25,15 @@ jobs:
         run: npm run build
         working-directory: www
 
-      # - name: Build Gatsby site
-      #   run: |
-      #     docker run --rm \
-      #     --volume="${{ github.workspace }}/www:/srv/jekyll" \
-      #     jekyll/builder:3.8.5 \
-      #     /bin/bash -c "gem install bundler && chmod a+w /srv/jekyll && jekyll build"
-      - name: Verify built output
+      - name: jerify built output
         run: find www/public/ -print
-      # - name: git status
-      #   run: git status -uno --porcelain
-      # - name: Deploy via FTP
-      #   uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      #   with:
-      #     ftp-server: ftp://ftp.zeddic.com/public_html/
-      #     ftp-username: ${{ secrets.FTP_USERNAME }}
-      #     ftp-password: ${{ secrets.FTP_PASSWORD }}
-      #     local-dir: www/_site/
-      #     git-ftp-args: >-
-      #       --verbose
+
+      - name: deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftp.zeddic.com/public_html/
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: www/public/
+          git-ftp-args: >-
+            --verbose
