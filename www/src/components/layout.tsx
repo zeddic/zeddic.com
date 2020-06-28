@@ -9,7 +9,9 @@ export function Layout({children}) {
       <section className="sidebar">
         <SiteLeftHeader></SiteLeftHeader>
         <SiteLeftNav></SiteLeftNav>
-        <div className="footer">Copyright Scott Bailey, {new Date().getFullYear()}</div>
+        <div className="footer">
+          Copyright Scott Bailey, {new Date().getFullYear()}
+        </div>
       </section>
 
       <section className="content">

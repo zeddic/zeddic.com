@@ -23,7 +23,6 @@ body {
   flex-direction: column;
 
   .header {
-    flex: 0 0 auto;
     background: $secondary;
     color: $secondary-text;
     text-align: center;
@@ -33,11 +32,9 @@ body {
     .logo {
       height: 120px;
       width: 120px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
       border-radius: 8px;
       overflow: hidden;
+      margin: 0 auto 8px;
 
       > img {
         width: 100%;
