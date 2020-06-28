@@ -29,5 +29,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Open Sans:400', 'Roboto:400'],
+        },
+      },
+    },
   ],
 };
