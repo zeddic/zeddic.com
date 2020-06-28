@@ -1,0 +1,45 @@
+# Builds the site and deploys it.
+name: Build and Deploy
+
+# Triggers the workflow on push for the master branch
+on:
+  push:
+    branches: [master]
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - run: npm install
+        working-directory: www
+
+      - name: build
+        run: npm run build
+        working-directory: www
+
+      # - name: Build Gatsby site
+      #   run: |
+      #     docker run --rm \
+      #     --volume="${{ github.workspace }}/www:/srv/jekyll" \
+      #     jekyll/builder:3.8.5 \
+      #     /bin/bash -c "gem install bundler && chmod a+w /srv/jekyll && jekyll build"
+      - name: Verify built output
+        run: find www/public/ -print
+      # - name: git status
+      #   run: git status -uno --porcelain
+      # - name: Deploy via FTP
+      #   uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      #   with:
+      #     ftp-server: ftp://ftp.zeddic.com/public_html/
+      #     ftp-username: ${{ secrets.FTP_USERNAME }}
+      #     ftp-password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: www/_site/
+      #     git-ftp-args: >-
+      #       --verbose
