@@ -68,7 +68,7 @@ body {
           }
         }
 
-        &.active > a {
+        a.active {
           color: $primary-text;
           background: $primary-accent;
           border-right: 4px solid $primary;
