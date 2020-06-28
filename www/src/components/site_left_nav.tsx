@@ -26,7 +26,7 @@ export function SiteLeftNav() {
     <nav className="nav">
       <ol className="nav-list">
         {navItems.map(item => (
-          <li>
+          <li key={item.title}>
             {!!item.url ? (
               <Link to={item.url} activeClassName="active">
                 {item.title}
@@ -38,7 +38,7 @@ export function SiteLeftNav() {
             {!!item.children && (
               <ol className="sub-nav-list">
                 {item.children.map(subitem => (
-                  <li>
+                  <li key={subitem.url}>
                     <Link to={subitem.url} activeClassName="active">
                       {subitem.title}
                     </Link>
