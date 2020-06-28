@@ -8,7 +8,12 @@ export default function Template({data}) {
 
   return (
     <Layout>
-      <div dangerouslySetInnerHTML={{__html: html}} />
+      <article className="post">
+        <header className="post-header">
+          <h1>{frontmatter.title}</h1>
+        </header>
+        <div className="post-content" dangerouslySetInnerHTML={{__html: html}} />
+      </article>
     </Layout>
   );
 }
