@@ -10,7 +10,7 @@ hide_title: true
 
 #### Tech Lead, Manager at Google
 
-#### Orange County, Southern California Area
+#### Southern California Area
 
 ## About me
 
