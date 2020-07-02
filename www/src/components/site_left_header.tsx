@@ -3,9 +3,9 @@ import React from 'react';
 export function SiteLeftHeader() {
   return (
     <div className="header">
-      <div className="logo">
+      <a className="logo" href="/">
         <img src="/assets/logo.jpg" />
-      </div>
+      </a>
       <p>Scott Bailey</p>
       <p>Software Engineer</p>
     </div>
