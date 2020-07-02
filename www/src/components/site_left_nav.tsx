@@ -4,6 +4,7 @@ import {useNotesToShowInLeftNav} from '../data/nav_notes';
 
 const NAV = [
   {title: 'Home', url: '/'},
+  {title: 'Projects', url: '/projects'},
   {
     title: 'Notes',
     children: [

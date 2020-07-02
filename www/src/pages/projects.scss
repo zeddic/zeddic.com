@@ -1,0 +1,17 @@
+.project-photos {
+  margin: 8px 0 8px;
+}
+
+img.thumbnail {
+  max-width: initial;
+  width: 200px;
+}
+
+.thumbnail-wrapper {
+  margin: 0 8px 8px 0;
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  width: 120px;
+  height: 120px;
+}

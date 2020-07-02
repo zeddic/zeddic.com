@@ -14,7 +14,7 @@ hide_title: true
 
 ## About me
 
-I’m a software engineer with 13 years experience. My passion lies in the frontend space where I enjoy solving tough technical problems to solve business needs. Recently I’ve been working at Google as a Tech Lead / Manager within their internal business intelligence suite. Prior to this I’ve worked on Google Analytics, AdWords, and at Canon's American R&D branch.
+I’m a software engineer with 13 years experience. My passion lies in the frontend space where I enjoy solving tough technical problems to solve business needs. Recently I’ve been working at Google as a Tech Lead Manager within their internal business intelligence suite. Prior to this I’ve worked on Google Analytics, AdWords, and at Canon's American R&D branch.
 
 ## Contact
 
