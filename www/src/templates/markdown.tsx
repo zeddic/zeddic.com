@@ -9,10 +9,15 @@ export default function Template({data}) {
   return (
     <Layout>
       <article className="post">
-        <header className="post-header">
-          <h1>{frontmatter.title}</h1>
-        </header>
-        <div className="post-content" dangerouslySetInnerHTML={{__html: html}} />
+        {!frontmatter.hide_title && (
+          <header className="post-header">
+            <h1>{frontmatter.title}</h1>
+          </header>
+        )}
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{__html: html}}
+        />
       </article>
     </Layout>
   );
@@ -23,6 +28,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        hide_title
       }
       fields {
         slug

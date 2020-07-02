@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-hide_header: true
+hide_title: true
 ---
 
 # Scott Bailey
@@ -39,15 +39,3 @@ I’m a software engineer with 13 years experience. My passion lies in the front
 * Masters in Business Administration
 
   University of Southern California
-
-## Personal projects
-
-- WebDKP
-- Board Game Geek Importer
-- Steering Behaviors
-
-## Other interests
-
-- Photography
-- Sailing
-- Video Game Development
