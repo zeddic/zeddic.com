@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Docker notes
-permalink: /notes/docker
+title_nav: Docker
+hide: false
 ---
 
 ## Overview

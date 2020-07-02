@@ -1,6 +1,6 @@
 ---
 title: Jekyll Notes
-permalink: /notes/jekyll
+hide: true
 ---
 
 ## Setup

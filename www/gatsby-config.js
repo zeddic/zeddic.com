@@ -4,18 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 module.exports = {
-  siteMetadata: {
-    nav: [
-      {title: 'Home', url: '/'},
-      {
-        title: 'Notes',
-        children: [
-          {title: 'tmux', url: '/notes/tmux'},
-          {title: 'Docker', url: '/notes/docker'},
-        ],
-      },
-    ],
-  },
+  siteMetadata: {},
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

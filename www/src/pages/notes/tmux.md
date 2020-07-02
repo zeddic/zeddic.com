@@ -1,6 +1,7 @@
 ---
-title: tmux notes
+title: tmux
 permalink: /notes/tmux
+hide: false
 ---
 
 ## Sessions

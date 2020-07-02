@@ -1,31 +1,27 @@
+import {Link} from 'gatsby';
 import React from 'react';
-import {Link, useStaticQuery, graphql} from 'gatsby';
+import {useNotesToShowInLeftNav} from '../data/nav_notes';
 
-const SITE_NAV_QUERY = graphql`
+const NAV = [
+  {title: 'Home', url: '/'},
   {
-    site {
-      siteMetadata {
-        nav {
-          title
-          url
-          children {
-            title
-            url
-          }
-        }
-      }
-    }
-  }
-`;
+    title: 'Notes',
+    children: [
+      // Populated from query
+    ],
+  },
+];
 
 export function SiteLeftNav() {
-  const data = useStaticQuery(SITE_NAV_QUERY);
-  const navItems = data.site.siteMetadata.nav;
+  const notes = useNotesToShowInLeftNav();
+  const visibleNotes = notes.filter(n => !n.hide);
+  const notesSection = NAV.find(item => item.title === 'Notes');
+  notesSection.children = visibleNotes;
 
   return (
     <nav className="nav">
       <ol className="nav-list">
-        {navItems.map(item => (
+        {NAV.map(item => (
           <li key={item.title}>
             {!!item.url ? (
               <Link to={item.url} activeClassName="active">
