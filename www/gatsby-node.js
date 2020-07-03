@@ -3,9 +3,9 @@ const path = require(`path`);
 
 exports.onCreateNode = ({node, getNode, actions}) => {
   // Append the property 'slug' on every markdown node.
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `MarkdownRemark` || node.internal.type === 'Mdx') {
     const {createNodeField} = actions;
-    const fileNode = getNode(node.parent);
+    // const fileNode = getNode(node.parent);
     const slug = createFilePath({node, getNode, basePath: `pages`});
 
     createNodeField({
@@ -23,6 +23,15 @@ exports.createPages = async ({actions, graphql, reporter}) => {
   const markdownTemplate = require.resolve(`./src/templates/markdown.tsx`);
   const result = await graphql(`
     {
+      allMdx {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
       allMarkdownRemark {
         edges {
           node {
@@ -41,7 +50,13 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({node}) => {
+  const edges = [
+    ...result.data.allMarkdownRemark.edges,
+    ...result.data.allMdx.edges,
+  ];
+
+  edges.forEach(({node}) => {
+    console.log(`Creating page for ${node.fields.slug}`);
     createPage({
       path: node.fields.slug,
       component: markdownTemplate,
