@@ -3,7 +3,6 @@ title: tmux
 permalink: /notes/tmux
 hide: false
 ---
-
 ## Sessions
 
 ### Create a new session

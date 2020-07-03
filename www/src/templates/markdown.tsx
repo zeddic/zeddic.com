@@ -2,7 +2,10 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import {Layout} from '../components/layout';
 
-export default function Template({data}) {
+/**
+ * A page template for rendering regular markdown pages.
+ */
+export default function MarkdownTemplate({data}) {
   const {markdownRemark} = data;
   const {frontmatter, html} = markdownRemark;
   console.log(data);

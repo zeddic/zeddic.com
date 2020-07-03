@@ -5,9 +5,12 @@ import {Layout} from '../components/layout';
 import {MDXProvider} from '@mdx-js/react';
 import {MDXRenderer} from 'gatsby-plugin-mdx';
 
-export default function Template({data}) {
+/**
+ * A template for rendering markdown mixed with react jsx.
+ */
+export default function MdxTemplate({data}) {
   const {mdx} = data;
-  const {frontmatter, html} = mdx;
+  const {frontmatter} = mdx;
 
   return (
     <Layout>
