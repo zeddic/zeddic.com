@@ -2,13 +2,15 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import {Layout} from '../components/layout';
 
+import {MDXProvider} from '@mdx-js/react';
+import {MDXRenderer} from 'gatsby-plugin-mdx';
+
 /**
- * A page template for rendering regular markdown pages.
+ * A template for rendering markdown mixed with react jsx.
  */
-export default function MarkdownTemplate({data}) {
-  const {markdownRemark} = data;
-  const {frontmatter, html} = markdownRemark;
-  console.log(data);
+export default function MdxTemplate({data}) {
+  const {mdx} = data;
+  const {frontmatter} = mdx;
 
   return (
     <Layout>
@@ -18,18 +20,19 @@ export default function MarkdownTemplate({data}) {
             <h1>{frontmatter.title}</h1>
           </header>
         )}
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={{__html: html}}
-        />
+        <div className="post-content">
+          <MDXProvider>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </div>
       </article>
     </Layout>
   );
 }
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}) {
-      html
+    mdx(fields: {slug: {eq: $slug}}) {
+      body
       frontmatter {
         title
         hide_title

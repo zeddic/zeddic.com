@@ -1,6 +1,6 @@
 import {Link} from 'gatsby';
 import React from 'react';
-import {useNotesToShowInLeftNav} from '../data/nav_notes';
+import {useMarkdownNotesMetadata} from '../data/static_markdown_notes_metadta';
 
 const NAV = [
   {title: 'Home', url: '/'},
@@ -14,7 +14,7 @@ const NAV = [
 ];
 
 export function SiteLeftNav() {
-  const notes = useNotesToShowInLeftNav();
+  const notes = useMarkdownNotesMetadata();
   const visibleNotes = notes.filter(n => !n.hide);
   const notesSection = NAV.find(item => item.title === 'Notes');
   notesSection.children = visibleNotes;

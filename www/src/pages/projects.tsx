@@ -38,13 +38,12 @@ export default function Projects() {
             building games in the browser.
           </p>
           <iframe
+            className="google-slides-iframe"
+            frameBorder="0"
             src="https://docs.google.com/presentation/d/e/2PACX-1vRi8FVMonMEAuZZP0TIOOZVHjXnrxyU-KOiQmYSeMWc8KKaSPoVHz3ZKh6uOVi21oiwvPpuMY13Wx1g/embed?start=false&loop=false&delayms=60000"
-            frameborder="0"
             width="100%"
             height="410"
-            allowfullscreen="true"
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
+            allowFullScreen
           ></iframe>
         </div>
       </article>

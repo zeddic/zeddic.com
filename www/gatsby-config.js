@@ -6,16 +6,35 @@
 module.exports = {
   siteMetadata: {},
   plugins: [
+    // Allow querying of src files via graphql
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/markdown`,
       },
     },
-    `gatsby-transformer-remark`,
+
+    // Include webfonts
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Open Sans:400', 'Roboto:400'],
+        },
+      },
+    },
+
+    // Sass support
     `gatsby-plugin-sass`,
+
+    // Allows absolute imports
     'gatsby-plugin-root-import',
+
+    // Markdown support
+    `gatsby-transformer-remark`,
+
+    // Format <code> blocks in markdown
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -29,12 +48,20 @@ module.exports = {
         ],
       },
     },
+
+    // Support markdown with mixed react (*.mdx)
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        google: {
-          families: ['Open Sans:400', 'Roboto:400'],
-        },
+        // Enable formatting <code> blocks in mdx
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+        ],
       },
     },
   ],
