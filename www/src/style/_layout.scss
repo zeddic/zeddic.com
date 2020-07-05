@@ -1,38 +1,29 @@
 body {
-  display: flex;
-  min-height: 100vh;
-  height: 100vh;
   color: $text-color;
-  background: $nav-background;
+  background: #fff;
+  /** Removes nav jitter w/ scrollbar being only on some pages */
+  width: calc(100vw - 34px);
 }
 
-#___gatsby {
-  display: flex;
-  flex: 1 0 0;
-}
-
-#gatsby-focus-wrapper {
+.site {
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  flex: 1 0 0;
+  max-width: 970px;
 }
 
 .sidebar {
-  flex: 0 0 240px;
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 200px;
 
   .header {
-    background: $secondary;
-    color: $secondary-text;
     text-align: center;
-    padding: 16px 0;
-    border-bottom: 8px solid $secondary-accent;
+    margin: 32px 0 16px 0;
 
     .logo {
-      height: 140px;
-      width: 140px;
-      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      line-height: 0;
+      border-radius: 14px;
       overflow: hidden;
       margin: 0 auto 8px;
       display: block;
@@ -41,10 +32,15 @@ body {
         width: 100%;
       }
     }
+
+    .name {
+      font-size: 18px;
+    }
   }
 
   .nav {
-    flex: 1 1 100%;
+    position: sticky;
+    top: 0;
     color: #2b2d42;
     padding: 5px 0;
 
@@ -87,31 +83,26 @@ body {
     }
   }
 
-  .footer {
-    flex: 0 0 auto;
-    padding: 8px 16px;
-    font-size: 11px;
-  }
 }
 
 .content {
-  box-shadow: 1px 0 5px rgba(0, 0, 0, .3);
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 100%;
-  overflow: auto;
-}
+  padding: 16px 32px;
+  flex: 1 1 auto;
+  overflow: hidden;
+  min-width: 400px;
 
-.content-inner {
-  background: #fff;
-  box-shadow: -1px 0 5px rgba(0, 0, 0, .3);
-  flex: 1 1 100%;
-  max-width: 740px;
+  .footer {
+    margin: 8px 0;
+    font-size: 12px;
+  }
 }
 
 // Page/Post layout.
 .post {
-  padding: 16px 32px;
+
+  .post-header h1 {
+    font-size: 40px;
+  }
 
   ul, ol {
     margin-left: 24px;

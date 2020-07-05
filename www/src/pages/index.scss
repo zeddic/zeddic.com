@@ -1,70 +1,74 @@
 @import "../style/vars";
 
-.title {
-  color: $secondary;
-  font-size: 20px;
-  margin: 0 0 8px 0;
-}
-
-.quick-links {
-  margin: 0 0 8px 0;
-
-  a {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 20px;
-  }
-
-
-  a > svg {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+.about-me {
+  .title {
     color: $secondary;
-    fill: currentColor
+    font-size: 20px;
+    margin: 0 0 8px 0;
   }
-}
 
-.about-me-section,
-.work-experience-section,
-.education-section {
-  margin: 0 0 16px 0;
-}
+  .about-quick-links {
+    margin: 0 0 8px 0;
+    display: flex;
 
-.work-experience-section {
-  .job {
-    margin: 0 0 12px 0;
-
-    &-title {
-      color: $secondary;
-      font-size: 18px;
-    }
-
-    &-subtitle {
-      font-size: 15px;
-      color: lighten($secondary, 10%);
-      margin: 0 0 4px 0;
-      display: flex;
+    a {
+      display: inline-flex;
       flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+
+    a > svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      color: $secondary;
+      fill: currentColor
     }
   }
-}
 
-.education-section {
-  .school {
-    margin: 0 0 12px 0;
-    
-    &-title {
-      color: $secondary;
-      font-size: 18px;
+  .about-me-section,
+  .work-experience-section,
+  .education-section {
+    margin: 0 0 16px 0;
+  }
+
+  .work-experience-section {
+    .job {
+      margin: 0 0 12px 0;
+
+      &-title {
+        color: $secondary;
+        font-size: 18px;
+      }
+
+      &-subtitle {
+        font-size: 15px;
+        color: lighten($secondary, 10%);
+        margin: 0 0 4px 0;
+      }
+
+      .years {
+        font-size: 13px;
+      }
     }
+  }
 
-    &-degree {
-      font-size: 15px;
-      color: lighten($secondary, 10%);
-      margin: 0 0 4px 0;
+  .education-section {
+    .school {
+      margin: 0 0 12px 0;
+      
+      &-title {
+        color: $secondary;
+        font-size: 18px;
+      }
+
+      &-degree {
+        font-size: 15px;
+        color: lighten($secondary, 10%);
+        margin: 0 0 4px 0;
+      }
     }
   }
 }

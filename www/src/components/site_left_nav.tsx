@@ -3,7 +3,7 @@ import React from 'react';
 import {useMarkdownNotesMetadata} from '../data/static_markdown_notes_metadta';
 
 const NAV = [
-  {title: 'Home', url: '/'},
+  {title: 'About me', url: '/'},
   {title: 'Projects', url: '/projects'},
   {
     title: 'Notes',

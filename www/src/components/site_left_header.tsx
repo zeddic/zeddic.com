@@ -6,8 +6,8 @@ export function SiteLeftHeader() {
       <a className="logo" href="/">
         <img src="/assets/self.jpg" />
       </a>
-      <p>Scott Bailey</p>
-      <p>Staff Software Engineer</p>
+      <p className="name">Scott Bailey</p>
+      <p className="rank">Staff Software Engineer</p>
     </div>
   );
 }

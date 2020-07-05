@@ -12,23 +12,27 @@ import GithubLogo from '../../static/assets/icons/github.svg';
 export default function AboutMe() {
   return (
     <Layout>
-      <article className="post">
+      <article className="post about-me">
         <header className="post-header">
           <h1>Scott Bailey</h1>
         </header>
         <div className="post-content">
           <div className="title">Staff Software Engineer at Google</div>
-          <div className="quick-links">
+          <div className="email"></div>
+          <div className="about-quick-links">
             <a href="mailto:scott@zeddic.com">
               <MailLogo />
               scott@zeddic.com
             </a>
-            <a href="https://www.linkedin.com/in/scott-bailey-z/">
+            <a
+              href="https://www.linkedin.com/in/scott-bailey-z/"
+              target="_blank"
+            >
               <LinkedInLogo />
               LinkedIn
             </a>
 
-            <a href="https://github.com/zeddic">
+            <a href="https://github.com/zeddic" target="_blank">
               <GithubLogo />
               GitHub
             </a>
@@ -54,8 +58,8 @@ export default function AboutMe() {
                 Google Internal Business Intelligence Suite
               </header>
               <div className="job-subtitle">
-                <span className="rank">Staff Software Engineer</span>
-                <span className="years">2016-Present</span>
+                <div className="rank">Staff Software Engineer</div>
+                <div className="years">2016-Present</div>
               </div>
               <div className="job-description"></div>
             </section>
@@ -63,8 +67,8 @@ export default function AboutMe() {
             <section className="job">
               <header className="job-title">Google Analytics</header>
               <div className="job-subtitle">
-                <span className="rank">Senior Software Engineer</span>
-                <span className="years">2012-2016</span>
+                <div className="rank">Senior Software Engineer</div>
+                <div className="years">2012-2016</div>
               </div>
               <div className="job-description"></div>
             </section>
@@ -72,8 +76,8 @@ export default function AboutMe() {
             <section className="job">
               <header className="job-title">Google AdWords</header>
               <div className="job-subtitle">
-                <span className="rank">Software Engineer</span>
-                <span className="years">2008-2012</span>
+                <div className="rank">Software Engineer</div>
+                <div className="years">2008-2012</div>
               </div>
               <div className="job-description"></div>
             </section>
@@ -81,8 +85,8 @@ export default function AboutMe() {
             <section className="job">
               <header className="job-title">Canon Development Americas</header>
               <div className="job-subtitle">
-                <span className="rank">Software Engineer</span>
-                <span className="years">2006-2008</span>
+                <div className="rank">Software Engineer</div>
+                <div className="years">2006-2008</div>
               </div>
               <div className="job-description"></div>
             </section>
