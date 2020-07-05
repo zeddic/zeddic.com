@@ -3,6 +3,7 @@ layout: page
 title: Docker notes
 title_nav: Docker
 hide: false
+hide_title: false
 ---
 
 ## Overview

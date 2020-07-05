@@ -20,7 +20,17 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Open Sans:400', 'Roboto:400'],
+          families: ['Open Sans:400', 'Roboto:400', 'Roboto:500'],
+        },
+      },
+    },
+
+    // Inline svg support
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets\/.*\.svg$/,
         },
       },
     },
