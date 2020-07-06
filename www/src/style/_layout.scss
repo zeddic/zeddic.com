@@ -1,8 +1,14 @@
+@import './vars';
+
 body {
   color: $text-color;
   background: #fff;
   /** Removes nav jitter w/ scrollbar being only on some pages */
   width: calc(100vw - 34px);
+
+  @include media-query($on-phone) {
+    width: initial;
+  }
 }
 
 .site {
@@ -10,14 +16,34 @@ body {
   display: flex;
   flex-direction: row;
   max-width: 970px;
+  @include media-query($on-phone) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
   flex: 0 0 200px;
 
+  @include media-query($on-phone) {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    align-items: center;
+    margin: 32px 32px 0;
+    justify-content: space-between;
+  }
+
   .header {
     text-align: center;
     margin: 32px 0 16px 0;
+
+    @include media-query($on-phone) {
+      margin: 0;
+      text-align: initial;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
     .logo {
       width: 160px;
@@ -27,6 +53,12 @@ body {
       overflow: hidden;
       margin: 0 auto 8px;
       display: block;
+      
+      @include media-query($on-phone) {
+        width: 80px;
+        height: 80px;
+        margin: 0 16px 0 0;
+      }
 
       > img {
         width: 100%;
@@ -38,11 +70,48 @@ body {
     }
   }
 
+  /** A button to toggle nav visibility shown only on mobile. */
+  .nav-mobile-button {
+    display: none;
+
+    @include media-query($on-phone) {
+      display: block;
+    }
+
+    button {
+      border: 0;
+      background: transparent;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
   .nav {
     position: sticky;
     top: 0;
     color: #2b2d42;
     padding: 5px 0;
+
+    /** When on mobile, only show the nav when toggled on */
+    @include media-query($on-phone) {
+      display: none;
+
+      &.opened {
+        background: #fff;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+        display: block;
+        left: 0;
+        max-height: 50%;
+        overflow: auto;
+        position: absolute;
+        right: 0;
+        top: 120px;
+        z-index: 2;
+      }
+    }
 
     ol {
       list-style: none;
@@ -82,8 +151,9 @@ body {
       }
     }
   }
-
 }
+
+
 
 .content {
   padding: 16px 32px;
@@ -91,8 +161,12 @@ body {
   overflow: hidden;
   min-width: 400px;
 
+  @include media-query($on-phone) {
+    min-width: initial;
+  }
+
   .footer {
-    margin: 8px 0;
+    margin: 32px 0;
     font-size: 12px;
   }
 }

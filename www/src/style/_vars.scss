@@ -23,14 +23,14 @@ $on-phone: 600px;
 $on-laptop: 800px;
 
 // Use media queries like this:
-// @include media-query($on-palm) {
+// @include media-query($on-phone) {
 //   .wrapper {
 //     padding-right: $spacing-unit / 2;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
+  @media (max-width: $device) {
     @content;
   }
 }
