@@ -28,7 +28,7 @@ function uploadGatsbyFiles() {
     ],
     deleteRemote: true,
   };
-  runFtp(config);
+  return runFtp(config);
 }
 
 /**
@@ -43,16 +43,18 @@ function uploadRootFiles() {
     localRoot: __dirname,
     remoteRoot: '/public_html',
     include: ['.htaccess'],
+    exclude: ['*/.htaccess'],
   };
-  runFtp(config);
+  return runFtp(config);
 }
 
 function runFtp(config) {
-  ftpDeploy
+  return ftpDeploy
     .deploy(config)
     .then(res => console.log('finished:', res))
     .catch(err => console.log(err));
 }
 
-uploadRootFiles();
-uploadGatsbyFiles();
+uploadRootFiles().then(() => {
+  uploadGatsbyFiles();
+});
