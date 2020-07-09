@@ -29,7 +29,7 @@ jobs:
         run: find www/public/ -print
 
       - name: deploy via FTP
-        run: npm run deploy
+        run: node ftp-deploy
         working-directory: www
         env:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
