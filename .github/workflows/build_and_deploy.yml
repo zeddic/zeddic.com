@@ -30,6 +30,7 @@ jobs:
 
       - name: deploy via FTP
         run: npm run deploy
+        working-directory: www
         env:
           FTP_USER: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
