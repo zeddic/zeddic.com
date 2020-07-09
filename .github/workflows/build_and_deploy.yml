@@ -29,11 +29,7 @@ jobs:
         run: find www/public/ -print
 
       - name: deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
-        with:
-          ftp-server: ftp://ftp.zeddic.com/public_html/
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: www/public/
-          git-ftp-args: >-
-            --verbose
+        run: npm run deploy
+        env:
+          FTP_USER: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}

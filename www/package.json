@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "node ftp-deploy.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.6",
@@ -31,6 +32,7 @@
     "react-medium-image-zoom": "^4.3.1"
   },
   "devDependencies": {
+    "ftp-deploy": "^2.3.7",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "2.0.5"
   },
