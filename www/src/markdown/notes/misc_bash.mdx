@@ -10,6 +10,12 @@ A collection of misc bash snippits for my own memory.
 ```shell
 # Converting all files in a directory to unix EOL markers
 find . -type f -print0 -name '*.ext' | xargs -0 dos2unix
+```
+
+## APF firewall
+```shell
+# Modify ports:
+vim /etc/apf/conf.apf
 
 # Restart a service (eg apf firewall) using systemctl
 /bin/systemctl {start | stop | restart} apf
@@ -62,4 +68,7 @@ pm2 logs my-job --lines 1000 --timestamp
 # register PM2 as a system service. Run this command then copy
 # and run the resulting command.
 pm2 startup
+
+# Set an env variable
+NODE_ENV=true pm2 restart my-job --update-env
 ```
