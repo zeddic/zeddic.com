@@ -72,6 +72,9 @@ pm2 startup
 # Deletes an a job. Accepts id if case duplicate jobs
 pm2 delete job_name
 
+# Show details for the job
+pm2 describe
+
 # Set an env variable
 NODE_ENV=true pm2 restart my-job --update-env
 ```

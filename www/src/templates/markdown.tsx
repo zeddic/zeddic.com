@@ -8,7 +8,6 @@ import {Layout} from '../components/layout';
 export default function MarkdownTemplate({data}) {
   const {markdownRemark} = data;
   const {frontmatter, html} = markdownRemark;
-  console.log(data);
 
   return (
     <Layout>
