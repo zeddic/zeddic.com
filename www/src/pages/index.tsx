@@ -82,14 +82,13 @@ export default function AboutMe() {
                         Increased frontend usage by 55% over a 1 year period
                       </li>
                     </ul>
-                    <li>
-                      Worked cross-site to build and release a pipeline
-                      monitoring frontend for another team in Zurich
-                    </li>
-                    <li>
-                      Created common frontend infrastructure used across the
-                      suite
-                    </li>
+                  </li>
+                  <li>
+                    Worked cross-site to build and release a pipeline monitoring
+                    frontend for another team in Zurich
+                  </li>
+                  <li>
+                    Created common frontend infrastructure used across the suite
                   </li>
                 </ul>
               </div>
