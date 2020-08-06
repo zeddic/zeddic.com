@@ -69,7 +69,7 @@ export default function AboutMe() {
                   </li>
                   <li>
                     Conduct career planning, product planning, and task
-                    priotization
+                    prioritization
                   </li>
                   <li>
                     Built a frontend application for editing and monitoring ETL
