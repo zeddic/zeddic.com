@@ -192,7 +192,7 @@ export default function AboutMe() {
             </header>
             <div className="school">
               <div className="school-title">
-                University of Soutern California
+                University of Southern California
               </div>
               <div className="school-degree">
                 Masters in Business Administration
