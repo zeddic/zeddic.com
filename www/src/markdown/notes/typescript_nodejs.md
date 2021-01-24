@@ -83,12 +83,38 @@ test('sample', () => {
 });
 ```
 
+## Debugging with Chrome
 To run tests with a debugger, add `debugger` to your test case you wish
 to debug. Run `yarn test:debug`. Open [about:inspect](about:inspect) 
 in  Chrome and select `Open dedicated DevTools for Node`. The dev tools
 instance should connect. Note: this can be flaky with WSL2. You might need 
 to run `wsl --shutdown` in Powershell in order to allow node to run the debugger
 on the proper port. [See bug](https://github.com/microsoft/WSL/issues/5298).
+
+## Debugging with VSCode
+Create a `launch.json` file in a `.vscode\` subfolder of your projects roots.
+You'll now be able to launch a debugger directly in VSCode via Run > Start Debugging.
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
+    }
+  ]
+}
+```
 
 # Setup prettier
 I use the [Prettier VSCode extension](https://github.com/prettier/prettier-vscode) for code
