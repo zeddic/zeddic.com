@@ -58,6 +58,9 @@ yarn add jest @types/jest ts-jest --dev
 
 # Create a default config file
 yarn ts-jest config:init
+
+# Or with npm
+./node_modules/.bin/ts-jest config:init
 ```
 
 Add new scripts to `package.json` to run tests in watch mode or in
