@@ -10,14 +10,14 @@ live development reloading with [ts-node-dev](https://github.com/whitecolor/ts-n
 # Setup Typescript
 ```shell
 # Setup yarn package w/ default options
-yarn init -y
+npm init -y
 
 # Add typescript deps
-yarn add typescript ts-node-dev @types/node --dev
+npm install typescript ts-node-dev @types/node --save-dev
 ```
 
 ## tsconfig.json
-Add a tsconfig.json to configure the Typescript compiler. You can use `yarn tsc --init` to create a file with a list of all options. A simplified version that compiles all code in `/src` and outputs it to `/build`:
+Add a tsconfig.json to configure the Typescript compiler. You can use `npx tsc --init` to create a file with a list of all options. A simplified version that compiles all code in `/src` and outputs it to `/build`:
 
 ```json
 {
@@ -48,19 +48,19 @@ Add a scripts section to package.json for development and building. Replace `ind
 You can now start development mode using:
 
 ```shell
-yarn run dev
+npm run dev
 ```
 
 # Setup Jest for testing
 ```shell
 # Install deps
-yarn add jest @types/jest ts-jest --dev
+npm install jest @types/jest ts-jest --save-dev
 
-# Create a default config file
+# Create a defualt config file
+npx ts-jest config:init
+
+# Or with npm:
 yarn ts-jest config:init
-
-# Or with npm
-./node_modules/.bin/ts-jest config:init
 ```
 
 Add new scripts to `package.json` to run tests in watch mode or in
@@ -73,7 +73,7 @@ debug mode.
 }
 ```
 
-Create a sample test in src. By default jest will look for files 
+Create a sample test in `src/`. By default jest will look for files 
 ending in `.spec.ts` or `.test.ts`, though this can be customized.
 
 An example test:
