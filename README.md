@@ -1,31 +1,38 @@
-# Zeddic.com
-This is the repo for my personal site [zeddic.com](https://zeddic.com).
-It is currently built using [GatsbyJS](https://gatsbyjs.com)
+# create-svelte
 
-## Local Development
-[Setup node](https://www.gatsbyjs.org/tutorial/part-zero/)
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-```shell
-# Checkout
-git clone zeddic.com https://github.com/zeddic/zeddic.com.git
+## Creating a project
 
-# Install deps
-cd zeddic.com/www
-npm install
+If you're seeing this, you've probably already done this step. Congrats!
 
-# Run
-gatsby develop -H 0.0.0.0
+```bash
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-### Gatsby and WSL2
-There are a few gotchas when using WSL2 for development
+## Developing
 
-1. The project should be built from a non mounted path \
-   (eg `~/code/`, and *not* `c/mnt/code/`).
-   This has [better performance at the moment](https://github.com/microsoft/WSL/issues/4197).
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-1. Gatsby can't bind to localhost ([bug](https://github.com/gatsbyjs/gatsby/issues/15163)). \
-   Look for the local IP address to be displayed by the Gatsby startup script
+```bash
+npm run dev
 
-## Deployments
-Deployments are push-on-green. They are automated via a Github Action workflow that builds and deploys the contents of the Gatsby site to [zeddic.com](https://zeddic.com)
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

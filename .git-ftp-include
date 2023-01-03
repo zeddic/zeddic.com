@@ -1,4 +1,0 @@
-# Configures git-ftp to always upload the build site
-# folder. git-ftp normally only uploads files managed by git
-# but the GitHub action will build Gatsby
-!www/public/
