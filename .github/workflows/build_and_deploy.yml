@@ -49,4 +49,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./deploy/
           server-dir: ./zeddic-app/
-          dry-run: true
+          dry-run: false
