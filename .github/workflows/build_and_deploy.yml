@@ -28,6 +28,7 @@ jobs:
       - name: Package Files
         run: |
           mkdir deploy
+          mv app.js deploy/
           mv build/ deploy/
           mv node_modules/ deploy/
           mv package.json deploy/
