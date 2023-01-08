@@ -21,7 +21,32 @@ jobs:
         run: npm ci
 
       - name: build
-        run: npm run build
+        run: >
+          npm run build
+          npm ci --prod
+
+      - name: Package Files
+        run: >
+          mkdir deploy
+          mv build/ deploy/
+          mv node_modules/ deploy/
+          mv package.json deploy/
+          mv package-lock.json deploy/
+          cd deploy
+          mkdir tmp
+          cd tmp
+          touch restart.txt
+          cd ../../
 
       - name: verify built output
-        run: find build/ -print
+        run: find deploy/ -print
+
+      - name: Deploy Files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ftp.zeddic.com.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./deploy/
+          remote-dir: ./zeddic-app/
+          dry-run: true
