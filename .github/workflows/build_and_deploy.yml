@@ -21,12 +21,12 @@ jobs:
         run: npm ci
 
       - name: build
-        run: >
-          npm run build && 
+        run: |
+          npm run build
           npm ci --prod
 
       - name: Package Files
-        run: >
+        run: |
           mkdir deploy
           mv build/ deploy/
           mv node_modules/ deploy/
