@@ -44,9 +44,9 @@ jobs:
       - name: Deploy Files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp.zeddic.com.com
+          server: ftp.zeddic.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./deploy/
-          remote-dir: ./zeddic-app/
+          server-dir: ./zeddic-app/
           dry-run: true
