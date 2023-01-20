@@ -36,7 +36,7 @@ jobs:
           cd deploy
           mkdir tmp
           cd tmp
-          touch restart.txt
+          date +%s > restart.txt
           cd ../../
 
       - name: verify built output
