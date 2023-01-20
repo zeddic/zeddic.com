@@ -1,0 +1,25 @@
+@use './typography-mixins.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @import './typography.scss';
+}
+
+body {
+  @include typography-mixins.text-body();
+  @apply text-gray-900;
+}
+
+a {
+  @apply text-red-600;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    @apply text-red-900;
+    text-decoration: underline;
+  }
+}
