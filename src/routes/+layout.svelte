@@ -3,6 +3,14 @@
   import '@fontsource/open-sans/500.css';
   import '@fontsource/open-sans/400.css';
   import '/src/styles/global.scss';
+
+  import Sidebar from '$lib/components/sidebar.svelte';
 </script>
 
-<slot />
+<div class="container mx-auto flex gap-8 px-4 mt-8">
+  <Sidebar class="flex-initial shrink-0 basis-60" />
+
+  <div>
+    <slot />
+  </div>
+</div>
