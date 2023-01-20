@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "16"
+          node-version: '16'
 
       - name: setup
         run: npm ci
@@ -28,7 +28,7 @@ jobs:
       - name: Package Files
         run: |
           mkdir deploy
-          mv app.js deploy/
+          mv app.cjs deploy/
           mv build/ deploy/
           mv node_modules/ deploy/
           mv package.json deploy/
