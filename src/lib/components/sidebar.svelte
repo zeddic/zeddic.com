@@ -7,6 +7,7 @@
   const NAV = [
     {title: 'About me', url: '/'},
     {title: 'Projects', url: '/projects'},
+    {title: 'Notes', url: '/notes'},
     // {
     //   title: 'Notes',
     //   children: [
@@ -21,7 +22,7 @@
     <img
       src="/src/static/baileys.png"
       alt="Scott Bailey"
-      class="w-40 mb-2 rounded-lg overflow-hidden mx-auto"
+      class="w-40 mb-4 rounded-full overflow-hidden mx-auto"
     />
 
     <p class="font-semibold text-h4">Scott Bailey</p>
