@@ -2,6 +2,7 @@
   import '@fontsource/open-sans/700.css';
   import '@fontsource/open-sans/500.css';
   import '@fontsource/open-sans/400.css';
+  import '@fontsource/material-icons-outlined';
   import '/src/styles/global.scss';
   import 'prism-themes/themes/prism-atom-dark.min.css';
 
