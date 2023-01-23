@@ -81,8 +81,8 @@ module.exports = {
             color: CUSTOM_COLORS.text.primary,
             code: {
               background: colors.gray[200],
-              padding: '2px 4px',
-              borderRadius: '2px',
+              padding: '4px 6px',
+              borderRadius: '4px',
               '&::before': {
                 content: '"" !important',
               },
