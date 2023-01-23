@@ -95,10 +95,10 @@ module.exports = {
             },
             h2: {
               marginTop: '1em',
-              marginBottom: '0.5em',
+              marginBottom: '0.8em',
             },
             h3: {
-              marginTop: '0.5em',
+              marginTop: '0.8em',
             },
             h4: {
               marginTop: '0.5em',

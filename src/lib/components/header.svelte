@@ -64,7 +64,7 @@
 
   <!-- Mobile only nav sidebar toggle -->
   <button type="button" class="nav-btn md:!hidden" on:click={onNavToggleClick}>
-    <Icon icon={open ? 'close' : 'menu'} size={40} />
+    <Icon icon={open ? 'close' : 'menu'} size={36} />
   </button>
 </section>
 
@@ -87,7 +87,7 @@
     padding: 4px;
     position: fixed;
     right: 16px;
-    top: 26px;
+    top: 28px;
     z-index: 10;
 
     &:hover,
@@ -113,6 +113,8 @@
     padding-right: 80px;
     padding-top: 28px;
     color: #fff;
+
+    @apply shadow-xl;
 
     &.open {
       display: block;
@@ -168,6 +170,7 @@
     nav {
       position: sticky;
       top: 0;
+      box-shadow: none;
 
       ol {
         flex-direction: row;

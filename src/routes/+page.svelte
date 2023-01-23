@@ -41,84 +41,122 @@
 
   <section class="mb-4">
     <h2>Experience</h2>
-    <section class="job">
-      <h3>Google's Internal Data Analytics Platform</h3>
-      <div class="job-subtitle">
-        <div class="rank">Staff Software Engineer</div>
-        <div class="years">2016-2021</div>
+
+    <section class="employer">
+      <div class="employer-ribbon !bg-[#4E878E]" />
+      <div>
+        <img
+          src="/src/assets/closefactor-logo.svg"
+          width="180"
+          alt="CloseFactor Logo"
+          class="my-2"
+        />
+
+        <section class="job">
+          <h3>CloseFactor</h3>
+          <div class="job-subtitle">
+            <div class="rank">Staff Software Engineer</div>
+            <div class="years">2021-Present</div>
+          </div>
+        </section>
       </div>
-      <ul>
-        <li>Tech lead & manager of a 4 person team building data analytics frontends</li>
-        <li>
-          Built an application for creating and monitoring ETL data pipelines using a rich graph
-          based editor
+    </section>
+
+    <section class="employer">
+      <div class="employer-ribbon" />
+      <div>
+        <img src="/src/assets/google-logo.svg" width="180" alt="Google Logo" class="my-2" />
+
+        <section class="job">
+          <h3>Internal Data Analytics Suite</h3>
+          <div class="job-subtitle">
+            <div class="rank">Staff Software Engineer</div>
+            <div class="years">2016-2021</div>
+          </div>
           <ul>
-            <li>Product responsible for running over XXX,000 weekly pipelines</li>
-            <li>Increased frontend usage by 55% over a 1 year period</li>
+            <li>Tech lead & manager of a 4 person team building data analytics frontends</li>
+            <li>
+              Built an application for creating and monitoring ETL data pipelines using a rich graph
+              based editor
+              <ul>
+                <li>Product responsible for running over XXX,000 weekly pipelines</li>
+                <li>Increased frontend usage by 55% over a 1 year period</li>
+              </ul>
+            </li>
+            <li>Worked cross-site to build a streaming pipeline monitoring UI</li>
+            <li>Created common frontend infrastructure used across Google</li>
           </ul>
-        </li>
-        <li>Worked cross-site to build a streaming pipeline monitoring UI</li>
-        <li>Created common frontend infrastructure used across Google</li>
-      </ul>
-    </section>
+        </section>
 
-    <section class="job">
-      <h3>Google Analytics</h3>
-      <div class="job-subtitle">
-        <div class="rank">Senior Software Engineer</div>
-        <div class="years">2012-2016</div>
-      </div>
-      <ul>
-        <li>
-          Designed and launched project to migrate Analytics to Angular
+        <section class="job">
+          <h3>Google Analytics</h3>
+          <div class="job-subtitle">
+            <div class="rank">Senior Software Engineer</div>
+            <div class="years">2012-2016</div>
+          </div>
           <ul>
-            <li>Lead team of 4, later coordinating work of 11 engineers at peak of migration</li>
-            <li>Conducted design, security, privacy, and legal reviews</li>
-            <li>Designed process that allowed for seamless, incremental migration</li>
+            <li>
+              Designed and launched the project to migrate Analytics to Angular
+              <ul>
+                <li>
+                  Lead team of 4, later coordinating work of 11 engineers at peak of migration
+                </li>
+                <li>Conducted design, security, privacy, and legal reviews</li>
+                <li>Designed process that allowed for seamless, incremental migration</li>
+              </ul>
+            </li>
+            <li>Lead a team of 3 to develop a common, accessible, frontend component library</li>
+            <li>Lead a team of 3 to develop Analytics 360 Suite user management features</li>
+            <li>Developed multiple features within the Analytics management UI</li>
           </ul>
-        </li>
-        <li>Lead a team of 3 to develop a common, accessible, frontend component library</li>
-        <li>Lead a team of 3 to develop Analytics 360 Suite user management features</li>
-        <li>Developed multiple features within the Analytics management UI</li>
-      </ul>
+        </section>
+
+        <section class="job">
+          <h3>AdWords Keyword Tool</h3>
+          <div class="job-subtitle">
+            <div class="rank">Software Engineer</div>
+            <div class="years">2008-2012</div>
+          </div>
+          <ul>
+            <li>Helped develop and release a new version of the Keyword Tool</li>
+            <li>
+              Developed multiple features including user preferences, improved search, and improved
+              table performance
+            </li>
+            <li>Developed suite a webdriver tests for automated frontend testing</li>
+            <li>Member of production on call rotation</li>
+            <li>Prepared training material and taught classes on GWT</li>
+          </ul>
+        </section>
+      </div>
     </section>
 
-    <section class="job">
-      <h3>Google AdWords Keyword Tool</h3>
-      <div class="job-subtitle">
-        <div class="rank">Software Engineer</div>
-        <div class="years">2008-2012</div>
-      </div>
-      <ul>
-        <li>Helped develop and release a new version of the Keyword Tool</li>
-        <li>
-          Developed multiple features including user preferences, improved search, and improved
-          table performance
-        </li>
-        <li>Developed suite a webdriver tests for automated frontend testing</li>
-        <li>Member of production on call rotation</li>
-        <li>Prepared training material and taught classes on GWT</li>
-      </ul>
-    </section>
+    <section class="employer">
+      <div class="employer-ribbon !bg-[#CC0000]" />
+      <div>
+        <img src="/src/assets/canon-logo.svg" width="180" alt="Canon Logo" class="my-2" />
 
-    <section class="job">
-      <h3>Canon Development Americas</h3>
-      <div class="job-subtitle">
-        <div class="rank">Software Engineer</div>
-        <div class="years">2006-2008</div>
-      </div>
-      <ul>
-        <li>
-          Conducted research and development to create new technologies for future Canon products
-        </li>
-        <li>Helped develop early versions of Canon’s support for Web Services on Devices</li>
+        <section class="job">
+          <h3>Canon Development Americas</h3>
+          <div class="job-subtitle">
+            <div class="rank">Software Engineer</div>
+            <div class="years">2006-2008</div>
+          </div>
+          <ul>
+            <li>
+              Conducted research and development to create new technologies for future Canon
+              products
+            </li>
+            <li>Helped develop early versions of Canon’s support for Web Services on Devices</li>
 
-        <li>
-          Developed exploratory software and a smart remote for a potential brand of Canon TVs
-        </li>
-        <li>Traveled to Canon Headquarters in Tokyo to showcase division’s latest work</li>
-        <li>Published 2 patents</li>
-      </ul>
+            <li>
+              Developed exploratory software and a smart remote for a potential brand of Canon TVs
+            </li>
+            <li>Traveled to Canon Headquarters in Tokyo to showcase division’s latest work</li>
+            <li>Published 2 patents</li>
+          </ul>
+        </section>
+      </div>
     </section>
   </section>
 
@@ -135,8 +173,6 @@
       <div class="school-degree">Bachelors in Computer Science</div>
     </div>
   </section>
-
-  <h4>This is a test</h4>
 </article>
 
 <style lang="scss">
@@ -150,9 +186,23 @@
     }
   }
 
-  .job {
-    marginb-ttom: 32px;
+  .employer {
+    display: flex;
+    margin-bottom: 32px;
+    @apply gap-4 md:gap-8;
 
+    &-ribbon {
+      background: #4285f4;
+      border-radius: 4px;
+      width: 8px;
+      overflow: hidden;
+      color: #fff;
+      position: relative;
+      flex: 0 0 auto;
+    }
+  }
+
+  .job {
     h3 {
       margin-bottom: 0px;
     }
