@@ -38,20 +38,19 @@
 <section class={'header mt-8 md:mt-16 ' + className}>
   <!-- Name and Photo -->
   <header class="">
-    <a href="/" class="flex gap-4 items-center text-text-primary !no-underline">
-      <!-- <Logo class="w-[60px] transition-colors" /> -->
-      <div class="bg-blue-100 rounded-full overflow-hidden w-[80px] ">
+    <a href="/" class="flex gap-2 items-center text-text-primary hover:text-ice-500 !no-underline">
+      <Logo class="w-[40px] transition-colors " />
+      <!-- <div class="bg-blue-100 rounded-full overflow-hidden w-[80px] ">
         <img src="/src/assets/baileys-cartoon.png" alt="Scott Bailey" />
-      </div>
+      </div> -->
       <!-- <img src="/src/assets/baileys.png" alt="Scott Bailey" class="w-[60px] rounded-full" /> -->
-      <p class="!font-light text-h1 !text-text-primary">Scott Bailey</p>
+      <p class="!font-light text-h2 !text-text-primary">Scott Bailey</p>
     </a>
   </header>
 
   <!-- Navigation Links -->
   <nav class:open>
     <!-- Mobile only header -->
-    <div class="md:hidden !font-light text-h2 mb-8 pl-4">Navigation</div>
     <ol>
       {#each NAV as item}
         <li>
@@ -65,7 +64,7 @@
 
   <!-- Mobile only nav sidebar toggle -->
   <button type="button" class="nav-btn md:!hidden" on:click={onNavToggleClick}>
-    <Icon icon={open ? 'close' : 'menu'} size={48} />
+    <Icon icon={open ? 'close' : 'menu'} size={40} />
   </button>
 </section>
 
@@ -78,7 +77,7 @@
   }
 
   .nav-btn {
-    @apply bg-slate-800;
+    @apply bg-gray-800;
     align-items: center;
     border-radius: 8px;
     border: none;
@@ -88,16 +87,16 @@
     padding: 4px;
     position: fixed;
     right: 16px;
-    top: 32px;
+    top: 26px;
     z-index: 10;
 
     &:hover,
     &:focus {
-      @apply bg-slate-700;
+      @apply bg-gray-700;
     }
 
     &:active {
-      @apply bg-slate-500;
+      @apply bg-gray-500;
     }
   }
 
@@ -109,8 +108,10 @@
     height: 100vh;
     top: 0;
     right: min(-400px, -100vw);
-    background: rgba(0, 0, 0, 0.9);
+    background: #fff;
     padding: 32px;
+    padding-right: 80px;
+    padding-top: 28px;
     color: #fff;
 
     &.open {
@@ -126,7 +127,9 @@
 
       li {
         a {
-          color: #fff;
+          @apply text-text-primary;
+          border-radius: 8px;
+          text-decoration-line: none;
           display: block;
           font-size: 24px;
           font-weight: 400;
@@ -134,15 +137,17 @@
           padding: 4px 16px;
 
           &:hover {
-            @apply bg-gray-500;
-            @apply text-white;
-            text-decoration: none;
+            @apply text-ice-500;
           }
         }
 
         a:global(.active) {
+          @apply bg-gray-800;
           color: #fff;
-          @apply bg-red-500;
+
+          &:hover {
+            @apply bg-ice-500;
+          }
         }
       }
     }
@@ -170,15 +175,14 @@
         li {
           a {
             font-weight: 500;
-            @apply text-red-600;
             font-size: 18px;
 
             &:hover {
-              color: #fff;
+              // color: #fff;
             }
 
             &.active {
-              color: #fff;
+              // color: #fff;
             }
           }
         }

@@ -11,16 +11,16 @@
 body {
   @include typography-mixins.text-body();
   @apply text-text-primary;
-  background: #fbfbfb;
+  @apply bg-canvas;
 }
 
 a {
-  @apply text-red-600;
+  @apply text-ice-600;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration-line: underline;
 
   &:hover {
-    @apply text-red-900;
-    text-decoration-line: underline;
+    @apply text-ice-700;
+    text-decoration-line: none;
   }
 }

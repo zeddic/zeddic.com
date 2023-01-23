@@ -9,8 +9,8 @@
   import Header from '$lib/components/header.svelte';
 </script>
 
-<div class="container mx-auto px-8">
-  <Header class="mb-8" />
+<div class="container mx-auto px-4 md:px-8">
+  <Header class="mb-16" />
 
   <div class="mb-16">
     <slot />

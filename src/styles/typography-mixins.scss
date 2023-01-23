@@ -4,38 +4,29 @@ $header-font-family: $font-family;
 
 @mixin text-h1 {
   font-family: $header-font-family;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 140%;
-  letter-spacing: -0.2;
+  font-weight: 800;
+  font-size: 2.25em;
+  line-height: 1.1111111;
 }
 
 @mixin text-h2 {
   font-family: $header-font-family;
-  font-style: normal;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 140%;
-  letter-spacing: -0.2;
+  font-size: 1.5em;
+  line-height: 1.3333333;
 }
 
 @mixin text-h3 {
   font-family: $header-font-family;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 140%;
-  letter-spacing: -0.2;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.6;
 }
 
 @mixin text-h4 {
   font-family: $header-font-family;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 120%;
-  letter-spacing: -0.2;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 @mixin text-body {

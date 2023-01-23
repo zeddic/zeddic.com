@@ -1,27 +1,33 @@
-<article class="prose-lg md:prose !max-w-none">
-  <h1 class="!mb-4">About me</h1>
+<article class="prose !max-w-none">
+  <div class="bg-blue-100 rounded-full overflow-hidden w-[120px] not-prose mb-4">
+    <img src="/src/assets/baileys-cartoon.png" alt="Scott Bailey" class="w-full" />
+  </div>
+  <div class="flex justify-between items-center gap-4">
+    <div>
+      <h1 class="!mb-2">About me</h1>
+      <div class="flex flex-wrap flex-col md:flex-row gap-2 md:gap-8 quick-links not-prose">
+        <a href="mailto:scott@zeddic.com">
+          <img src="/src/assets/gmail.svg" alt="Mail icon" class="w-[24px]" />
+          scott@zeddic.com
+        </a>
+        <a href="https://www.linkedin.com/in/scott-bailey-z/" target="_blank" rel="noreferrer">
+          <img src="/src/assets/linkedin.svg" alt="Mail icon" class="w-[24px]" />
+          LinkedIn
+        </a>
+
+        <a href="https://github.com/zeddic" target="_blank" rel="noreferrer">
+          <img src="/src/assets/github.svg" alt="Mail icon" class="w-[24px]" />
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
 
   <section class="mb-4">
-    <div class="flex flex-wrap flex-col md:flex-row gap-2 md:gap-8 quick-links not-prose">
-      <a href="mailto:scott@zeddic.com">
-        <img src="/src/assets/gmail.svg" alt="Mail icon" class="w-[24px]" />
-        scott@zeddic.com
-      </a>
-      <a href="https://www.linkedin.com/in/scott-bailey-z/" target="_blank" rel="noreferrer">
-        <img src="/src/assets/linkedin.svg" alt="Mail icon" class="w-[24px]" />
-        LinkedIn
-      </a>
-
-      <a href="https://github.com/zeddic" target="_blank" rel="noreferrer">
-        <img src="/src/assets/github.svg" alt="Mail icon" class="w-[24px]" />
-        GitHub
-      </a>
-    </div>
-
     <p>
-      I'm a staff software engineer who love's the frontend. I'm currently working at the startup
-      <a href="https://closefactor.com">CloseFactor</a> where I'm helping build out the core
-      product. Previously I've worked at
+      I'm a staff software engineer who love's the frontend. I'm currently working at
+      <a href="https://closefactor.com">CloseFactor</a>, an early stage startup where I'm helping
+      build out the core product. Previously I've worked at
       <a href="https://google.com">Google</a> and
       <a href="https://www.usa.canon.com/">Canon USA R&D</a>.
     </p>
@@ -29,8 +35,7 @@
     <p>
       While at Google I worked on frontends you might have used, such as
       <a href="https://analytics.google.com/">Analytics</a> and
-      <a href="https://ads.google.com/">AdWords</a>. I also spent quite a bit of time building out
-      frontends for and data pipelines and analytics.
+      <a href="https://ads.google.com/">AdWords</a>.
     </p>
   </section>
 
@@ -130,6 +135,8 @@
       <div class="school-degree">Bachelors in Computer Science</div>
     </div>
   </section>
+
+  <h4>This is a test</h4>
 </article>
 
 <style lang="scss">
