@@ -2,6 +2,7 @@
   import {page} from '$app/stores';
   import Icon from './icon.svelte';
   import {afterNavigate} from '$app/navigation';
+  import Logo from './logo.svelte';
 
   let className: string;
   export {className as class};
@@ -34,27 +35,23 @@
   }
 </script>
 
-<section class={'sidebar ' + className} class:open>
+<section class={'header mt-8 md:mt-16 ' + className}>
   <!-- Name and Photo -->
-  <header class="person text-center mb-2">
-    <a href="/">
-      <img
-        src="/src/static/baileys.png"
-        alt="Scott Bailey"
-        class="w-40 mb-4 rounded-full overflow-hidden mx-auto"
-      />
+  <header class="">
+    <a href="/" class="flex gap-4 items-center text-text-primary !no-underline">
+      <!-- <Logo class="w-[60px] transition-colors" /> -->
+      <div class="bg-blue-100 rounded-full overflow-hidden w-[80px] ">
+        <img src="/src/assets/baileys-cartoon.png" alt="Scott Bailey" />
+      </div>
+      <!-- <img src="/src/assets/baileys.png" alt="Scott Bailey" class="w-[60px] rounded-full" /> -->
+      <p class="!font-light text-h1 !text-text-primary">Scott Bailey</p>
     </a>
-    <p class="font-semibold text-h4">Scott Bailey</p>
   </header>
 
-  <!-- Divider -->
-  <div class="hidden md:block border-t border-t-gray-300 mx-8 mt-4 mb-4 h-[1px]" />
-
-  <!-- Mobile only header -->
-  <div class="md:hidden mb-8 text-h3 pl-4">Scott Bailey</div>
-
   <!-- Navigation Links -->
-  <nav>
+  <nav class:open>
+    <!-- Mobile only header -->
+    <div class="md:hidden !font-light text-h2 mb-8 pl-4">Navigation</div>
     <ol>
       {#each NAV as item}
         <li>
@@ -65,17 +62,23 @@
       {/each}
     </ol>
   </nav>
+
+  <!-- Mobile only nav sidebar toggle -->
+  <button type="button" class="nav-btn md:!hidden" on:click={onNavToggleClick}>
+    <Icon icon={open ? 'close' : 'menu'} size={48} />
+  </button>
 </section>
 
-<!-- Mobile only nav sidebar toggle -->
-<button type="button" class="nav-btn md:!hidden" on:click={onNavToggleClick}>
-  <Icon icon={open ? 'close' : 'menu'} size={48} />
-</button>
-
 <style lang="scss">
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
   .nav-btn {
     @apply bg-slate-800;
-
     align-items: center;
     border-radius: 8px;
     border: none;
@@ -85,7 +88,7 @@
     padding: 4px;
     position: fixed;
     right: 16px;
-    top: 16px;
+    top: 32px;
     z-index: 10;
 
     &:hover,
@@ -98,10 +101,10 @@
     }
   }
 
-  // MOBILE SIDEBAR
-
-  .sidebar {
+  // MOBILE HEADER
+  nav {
     position: fixed;
+
     width: min(400px, 100vw);
     height: 100vh;
     top: 0;
@@ -110,86 +113,73 @@
     padding: 32px;
     color: #fff;
 
-    .person {
-      display: none;
-    }
-
     &.open {
       display: block;
       right: 0px;
       transition: right ease-in 100ms;
     }
-  }
 
-  // MOBILE NAVIGATION LINKS
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
 
-  nav {
-    position: sticky;
+      li {
+        a {
+          color: #fff;
+          display: block;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 1.5em;
+          padding: 4px 16px;
 
-    list-style: none;
-    margin: 0;
-
-    li {
-      margin: 0 0 16px 0;
-
-      a {
-        color: #fff;
-        display: block;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 1.5em;
-        padding: 4px 16px;
-
-        &:hover {
-          @apply bg-gray-500;
-          @apply text-white;
-          text-decoration: none;
+          &:hover {
+            @apply bg-gray-500;
+            @apply text-white;
+            text-decoration: none;
+          }
         }
-      }
 
-      a:global(.active) {
-        color: #fff;
-        @apply bg-red-500;
-        @apply border-r-4 border-red-700;
+        a:global(.active) {
+          color: #fff;
+          @apply bg-red-500;
+        }
       }
     }
   }
 
-  // DESKTOP SIDEBAR AND NAVIGATION LINKS
+  // DESKTOP HEADER
 
   @screen md {
-    .sidebar {
+    nav {
       background: initial;
       color: initial;
-      display: block;
       height: initial;
       padding: initial;
       position: initial;
       width: initial;
-
-      .person {
-        display: block;
-      }
     }
 
     nav {
       position: sticky;
       top: 0;
 
-      li {
-        margin: 0 0 4px 0;
+      ol {
+        flex-direction: row;
 
-        a {
-          font-weight: 500;
-          @apply text-red-600;
-          font-size: initial;
+        li {
+          a {
+            font-weight: 500;
+            @apply text-red-600;
+            font-size: 18px;
 
-          &:hover {
-            color: #fff;
-          }
+            &:hover {
+              color: #fff;
+            }
 
-          &.active {
-            color: #fff;
+            &.active {
+              color: #fff;
+            }
           }
         }
       }

@@ -1,10 +1,15 @@
 <script lang="ts">
   export let icon: string;
   export let size: number | undefined = undefined;
+  let className: string = '';
+  export {className as class};
+
   const sizeStr = size ? `${size}px` : '';
 </script>
 
-<div class="icon" style="width:{sizeStr}; height:{sizeStr}; font-size:{sizeStr}">{icon}</div>
+<div class={'icon ' + className} style="width:{sizeStr}; height:{sizeStr}; font-size:{sizeStr}">
+  {icon}
+</div>
 
 <style lang="scss">
   .icon {

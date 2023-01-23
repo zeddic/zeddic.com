@@ -5,6 +5,8 @@
   const posts = data.posts;
 </script>
 
+<h1>Notes</h1>
+
 <ul>
   {#each posts as post}
     <li>
