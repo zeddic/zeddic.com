@@ -40,10 +40,6 @@
   <header class="">
     <a href="/" class="flex gap-2 items-center text-text-primary hover:text-ice-500 !no-underline">
       <Logo class="w-[40px] transition-colors " />
-      <!-- <div class="bg-blue-100 rounded-full overflow-hidden w-[80px] ">
-        <img src="/src/assets/baileys-cartoon.png" alt="Scott Bailey" />
-      </div> -->
-      <!-- <img src="/src/assets/baileys.png" alt="Scott Bailey" class="w-[60px] rounded-full" /> -->
       <p class="!font-light text-h2 !text-text-primary">Scott Bailey</p>
     </a>
   </header>
