@@ -17,20 +17,12 @@
       with World of Warcraft by means on an addon that users can download.
     </p>
     <div class="flex flex-wrap gap-2 justify-center md:justify-start ">
-      <Thumbnail group="webdkp" src="/src/assets/projects/webdkp/addon.jpg" alt="Photo of addon" />
-      <Thumbnail group="webdkp" src="/src/assets/projects/webdkp/addon2.jpg" alt="Photo of addon" />
-      <Thumbnail
-        group="webdkp"
-        src="/src/assets/projects/webdkp/awards.jpg"
-        alt="Viewing assigned awards"
-      />
-      <Thumbnail
-        group="webdkp"
-        src="/src/assets/projects/webdkp/control.jpg"
-        alt="DKP Control setup"
-      />
-      <Thumbnail group="webdkp" src="/src/assets/projects/webdkp/manage.jpg" alt="DKP Management" />
-      <Thumbnail group="webdkp" src="/src/assets/projects/webdkp/table.jpg" alt="Website table" />
+      <Thumbnail group="webdkp" src="/images/projects/webdkp/addon.jpg" alt="Photo of addon" />
+      <Thumbnail group="webdkp" src="/images/projects/webdkp/addon2.jpg" alt="Photo of addon" />
+      <Thumbnail group="webdkp" src="/images/projects/webdkp/awards.jpg" alt="Assigned awards" />
+      <Thumbnail group="webdkp" src="/images/projects/webdkp/control.jpg" alt="DKP Control setup" />
+      <Thumbnail group="webdkp" src="/images/projects/webdkp/manage.jpg" alt="DKP Management" />
+      <Thumbnail group="webdkp" src="/images/projects/webdkp/table.jpg" alt="Website table" />
     </div>
   </section>
 

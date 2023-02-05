@@ -1,22 +1,28 @@
+<script type="ts">
+  import githubLogo from '/src/assets/github.svg';
+  import gmailLogo from '/src/assets/gmail.svg';
+  import linkedInLogo from '/src/assets/linkedin.svg';
+</script>
+
 <article class="prose !max-w-none">
-  <div class="bg-blue-100 rounded-full overflow-hidden w-[120px] not-prose mb-4">
+  <!-- <div class="bg-blue-100 rounded-full overflow-hidden w-[120px] not-prose mb-4">
     <img src="/src/assets/baileys-cartoon.png" alt="Scott Bailey" class="w-full" />
-  </div>
+  </div> -->
   <div class="flex justify-between items-center gap-4">
     <div>
       <h1 class="!mb-2">About me</h1>
       <div class="flex flex-wrap flex-col md:flex-row gap-2 md:gap-8 quick-links not-prose">
         <a href="mailto:scott@zeddic.com">
-          <img src="/src/assets/gmail.svg" alt="Mail icon" class="w-[24px]" />
+          <img src={gmailLogo} alt="Mail icon" class="w-[24px]" />
           scott@zeddic.com
         </a>
         <a href="https://www.linkedin.com/in/scott-bailey-z/" target="_blank" rel="noreferrer">
-          <img src="/src/assets/linkedin.svg" alt="Mail icon" class="w-[24px]" />
+          <img src={linkedInLogo} alt="Mail icon" class="w-[24px]" />
           LinkedIn
         </a>
 
         <a href="https://github.com/zeddic" target="_blank" rel="noreferrer">
-          <img src="/src/assets/github.svg" alt="Mail icon" class="w-[24px]" />
+          <img src={githubLogo} alt="Mail icon" class="w-[24px]" />
           GitHub
         </a>
       </div>
@@ -45,12 +51,7 @@
     <section class="employer">
       <div class="employer-ribbon !bg-[#4E878E]" />
       <div>
-        <img
-          src="/src/assets/closefactor-logo.svg"
-          width="180"
-          alt="CloseFactor Logo"
-          class="my-2"
-        />
+        <img src="/images/closefactor-logo.svg" width="180" alt="CloseFactor Logo" class="my-2" />
 
         <section class="job">
           <h3>CloseFactor</h3>
@@ -65,7 +66,7 @@
     <section class="employer">
       <div class="employer-ribbon" />
       <div>
-        <img src="/src/assets/google-logo.svg" width="180" alt="Google Logo" class="my-2" />
+        <img src="/images/google-logo.svg" width="180" alt="Google Logo" class="my-2" />
 
         <section class="job">
           <h3>Internal Data Analytics Suite</h3>
@@ -134,7 +135,7 @@
     <section class="employer">
       <div class="employer-ribbon !bg-[#CC0000]" />
       <div>
-        <img src="/src/assets/canon-logo.svg" width="180" alt="Canon Logo" class="my-2" />
+        <img src="/images/canon-logo.svg" width="180" alt="Canon Logo" class="my-2" />
 
         <section class="job">
           <h3>Canon Development Americas</h3>

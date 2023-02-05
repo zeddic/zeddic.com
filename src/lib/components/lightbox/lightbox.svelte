@@ -13,24 +13,6 @@
   /** Emit when the lightbox wishes to be closed. */
   const close = () => dispatch('close');
 
-  let modal: HTMLElement;
-
-  // const imageGroup = lightboxStore.getImageGroup(img);
-  // if (e.key === 'Tab') {
-  //   // trap focus
-  //   const nodes = modal.querySelectorAll<HTMLElement>('*');
-  //   const tabbable = Array.from(nodes).filter(n => n.tabIndex >= 0);
-
-  //   let index = tabbable.indexOf(document.activeElement as HTMLElement);
-  //   if (index === -1 && e.shiftKey) index = 0;
-
-  //   index += tabbable.length + (e.shiftKey ? -1 : 1);
-  //   index %= tabbable.length;
-
-  //   tabbable[index].focus();
-  //   e.preventDefault();
-  // }
-
   lightboxStore.setActive(img);
   const activeImg = lightboxStore.selectActive();
 
@@ -60,7 +42,7 @@
 <div class="modal-container">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div class="backdrop" on:click={close} />
-  <div class="modal" role="dialog" aria-modal="true" bind:this={modal}>
+  <div class="modal" role="dialog" aria-modal="true">
     <!-- svelte-ignore a11y-autofocus -->
     <button type="button" autofocus on:click={close} aria-label="Close">
       <img src={$activeImg?.src} alt={$activeImg?.alt} /></button

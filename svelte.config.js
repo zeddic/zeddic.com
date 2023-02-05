@@ -13,7 +13,7 @@ const config = {
       // },
       // layout: 'src/routes/+layout.svelte',
     }),
-    importAssets(),
+    // importAssets(),
     vitePreprocess(),
     // preprocess(),
   ],
