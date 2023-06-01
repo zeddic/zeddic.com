@@ -15,7 +15,7 @@
   let NAV: NavItem[] = [
     {title: 'About me', url: '/'},
     {title: 'Projects', url: '/projects'},
-    {title: 'Notes', url: '/notes'},
+    // {title: 'Notes', url: '/notes'},
   ];
 
   let open = false;

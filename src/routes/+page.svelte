@@ -2,6 +2,7 @@
   import githubLogo from '/src/assets/github.svg';
   import gmailLogo from '/src/assets/gmail.svg';
   import linkedInLogo from '/src/assets/linkedin.svg';
+  import youtubeLogo from '/src/assets/youtube.svg';
 </script>
 
 <article class="prose !max-w-none">
@@ -17,13 +18,22 @@
           scott@zeddic.com
         </a>
         <a href="https://www.linkedin.com/in/scott-bailey-z/" target="_blank" rel="noreferrer">
-          <img src={linkedInLogo} alt="Mail icon" class="w-[24px]" />
+          <img src={linkedInLogo} alt="LinkedIn Icon" class="w-[24px]" />
           LinkedIn
         </a>
 
         <a href="https://github.com/zeddic" target="_blank" rel="noreferrer">
-          <img src={githubLogo} alt="Mail icon" class="w-[24px]" />
+          <img src={githubLogo} alt="GitHub Icon" class="w-[24px]" />
           GitHub
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UCl2bo53O_QIR9gVydSGzZTg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={youtubeLogo} alt="YouTube Icon" class="w-[24px]" />
+          YouTube
         </a>
       </div>
     </div>
