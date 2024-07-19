@@ -41,11 +41,9 @@
 
   <section class="mb-4">
     <p>
-      I'm a staff software engineer who love's the frontend. I'm currently working at
-      <a href="https://closefactor.com">CloseFactor</a>, an early stage startup where I'm helping
-      build out the core product. Previously I've worked at
-      <a href="https://google.com">Google</a> and
-      <a href="https://www.usa.canon.com/">Canon USA R&D</a>.
+      I'm a staff software engineer who love's to build. I'm currently working at <a href="https://figma.com">Figma</a> on 
+      <a href="https://help.figma.com/hc/en-us/sections/23536356509975-Build-design-systems">Design Systems</a>.
+      Previously I've worked at <a href="https://google.com">Google</a> and <a href="https://www.usa.canon.com/">Canon USA R&D</a>.
     </p>
 
     <p>
@@ -57,6 +55,24 @@
 
   <section class="mb-4">
     <h2>Experience</h2>
+    
+    <section class="employer">
+      <div class="employer-ribbon !bg-[#a259ff]" />
+      <div>
+        <img src="/images/figma-logo.svg" width="40" alt="Figma Logo" class="my-2" />
+
+        <section class="job">
+          <h3>Figma</h3>
+          <div class="job-subtitle">
+            <div class="rank">Staff Software Engineer</div>
+            <div class="years">2023-Present</div>
+          </div>
+          <ul>
+            <li>Helping build Design Systems and Design System Analytics</li> 
+          </ul>
+        </section>
+      </div>
+    </section>
 
     <section class="employer">
       <div class="employer-ribbon !bg-[#4E878E]" />
@@ -67,8 +83,11 @@
           <h3>CloseFactor</h3>
           <div class="job-subtitle">
             <div class="rank">Staff Software Engineer</div>
-            <div class="years">2021-Present</div>
+            <div class="years">2021-2023</div>
           </div>
+          <ul>
+            <li>Eearly employee building out the core product</li> 
+          </ul>
         </section>
       </div>
     </section>
