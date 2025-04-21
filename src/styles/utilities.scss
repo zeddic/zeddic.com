@@ -1,0 +1,31 @@
+@use './typography-mixins.scss';
+
+@layer utilities {
+  h1,
+  .text-h1 {
+    @include typography-mixins.text-h1();
+  }
+
+  h2,
+  .text-h2 {
+    @include typography-mixins.text-h2();
+  }
+
+  h3,
+  .text-h3 {
+    @include typography-mixins.text-h3();
+  }
+
+  h4,
+  .text-h4 {
+    @include typography-mixins.text-h4();
+  }
+
+  .text-body {
+    @include typography-mixins.text-body();
+  }
+
+  .text-label {
+    @include typography-mixins.text-label();
+  }
+}

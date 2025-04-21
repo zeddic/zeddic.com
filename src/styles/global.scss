@@ -1,12 +1,9 @@
 @use './typography-mixins.scss';
+@use './utilities.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  @import './typography.scss';
-}
 
 body {
   @include typography-mixins.text-body();
