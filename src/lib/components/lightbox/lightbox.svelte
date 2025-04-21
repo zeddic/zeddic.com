@@ -40,8 +40,7 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="modal-container">
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div class="backdrop" on:click={close} />
+  <div class="backdrop" on:click={close} aria-hidden="true" />
   <div class="modal" role="dialog" aria-modal="true">
     <!-- svelte-ignore a11y-autofocus -->
     <button type="button" autofocus on:click={close} aria-label="Close">
