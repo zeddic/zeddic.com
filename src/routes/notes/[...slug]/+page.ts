@@ -1,6 +1,8 @@
 import {createNoteDocFromImport, type NoteDoc} from '$lib/docs';
 import type {PageLoadEvent} from './$types';
 
+export const prerender = true;
+
 export async function load({params}: PageLoadEvent): Promise<NoteDoc> {
   const raw = await importMarkdown(params.slug);
   return createNoteDocFromImport(raw);

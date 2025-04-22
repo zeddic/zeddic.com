@@ -65,6 +65,10 @@
 </section>
 
 <style lang="scss">
+  @reference "../../styles/global.scss";
+  // @reference "tailwindcss"
+  // import '/src/styles/global.scss';
+
   .header {
     display: flex;
     align-items: center;

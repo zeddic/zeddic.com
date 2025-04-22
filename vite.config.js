@@ -1,11 +1,27 @@
-import { sveltekit } from '@sveltejs/kit/vite';
+import {sveltekit} from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
+import {defineConfig} from 'vite';
 
-/** @type {import('vite').UserConfig} */
-const config = {
-	plugins: [sveltekit()],
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
-};
+export default defineConfig({
+  plugins: [tailwindcss(), sveltekit()],
+  test: {
+    include: ['src/**/*.{test,spec}.{js,ts}'],
+  },
+});
 
-export default config;
+// /** @type {import('vite').UserConfig} */
+// const config = {
+//   plugins: [tailwindcss(), sveltekit()],
+//   test: {
+//     include: ['src/**/*.{test,spec}.{js,ts}'],
+//   },
+//   css: {
+//     preprocessorOptions: {
+//       scss: {
+//         api: 'modern',
+//       },
+//     },
+//   },
+// };
+
+// export default config;
