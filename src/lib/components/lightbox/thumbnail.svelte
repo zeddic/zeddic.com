@@ -35,6 +35,8 @@
 {/if}
 
 <style lang="scss">
+  @reference "../../../styles/global.css";
+
   button {
     @apply inline-flex w-32 h-32 overflow-hidden;
     @apply items-center justify-center border border-gray-300 rounded-md transition-all hover:shadow-lg hover:-translate-y-1;

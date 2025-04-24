@@ -8,20 +8,3 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,ts}'],
   },
 });
-
-// /** @type {import('vite').UserConfig} */
-// const config = {
-//   plugins: [tailwindcss(), sveltekit()],
-//   test: {
-//     include: ['src/**/*.{test,spec}.{js,ts}'],
-//   },
-//   css: {
-//     preprocessorOptions: {
-//       scss: {
-//         api: 'modern',
-//       },
-//     },
-//   },
-// };
-
-// export default config;

@@ -1,17 +1,17 @@
-<script type="ts">
+<script>
   import githubLogo from '/src/assets/github.svg';
   import gmailLogo from '/src/assets/gmail.svg';
   import linkedInLogo from '/src/assets/linkedin.svg';
   import youtubeLogo from '/src/assets/youtube.svg';
 </script>
 
-<article class="prose !max-w-none">
+<article class="prose max-w-none!">
   <!-- <div class="bg-blue-100 rounded-full overflow-hidden w-[120px] not-prose mb-4">
     <img src="/src/assets/baileys-cartoon.png" alt="Scott Bailey" class="w-full" />
   </div> -->
   <div class="flex justify-between items-center gap-4">
     <div>
-      <h1 class="!mb-2">About me</h1>
+      <h1 class="mb-2!">About me</h1>
       <div class="flex flex-wrap flex-col md:flex-row gap-2 md:gap-8 quick-links not-prose">
         <a href="mailto:scott@zeddic.com">
           <img src={gmailLogo} alt="Mail icon" class="w-[24px]" />
@@ -41,9 +41,14 @@
 
   <section class="mb-4">
     <p>
-      I'm a staff software engineer who love's to build. I'm currently working at <a href="https://figma.com">Figma</a> on 
-      <a href="https://help.figma.com/hc/en-us/sections/23536356509975-Build-design-systems">Design Systems</a>.
-      Previously I've worked at <a href="https://google.com">Google</a> and <a href="https://www.usa.canon.com/">Canon USA R&D</a>.
+      I'm a staff software engineer who love's to build. I'm currently working at <a
+        href="https://figma.com">Figma</a
+      >
+      on
+      <a href="https://help.figma.com/hc/en-us/sections/23536356509975-Build-design-systems"
+        >Design Systems</a
+      >. Previously I've worked at <a href="https://google.com">Google</a> and
+      <a href="https://www.usa.canon.com/">Canon USA R&D</a>.
     </p>
 
     <p>
@@ -55,9 +60,9 @@
 
   <section class="mb-4">
     <h2>Experience</h2>
-    
+
     <section class="employer">
-      <div class="employer-ribbon !bg-[#a259ff]" />
+      <div class="employer-ribbon bg-[#a259ff]!"></div>
       <div>
         <img src="/images/figma-logo.svg" width="40" alt="Figma Logo" class="my-2" />
 
@@ -68,14 +73,14 @@
             <div class="years">2023-Present</div>
           </div>
           <ul>
-            <li>Helping build Design Systems and Design System Analytics</li> 
+            <li>Helping build Design Systems and Design System Analytics</li>
           </ul>
         </section>
       </div>
     </section>
 
     <section class="employer">
-      <div class="employer-ribbon !bg-[#4E878E]" />
+      <div class="employer-ribbon bg-[#4E878E]!"></div>
       <div>
         <img src="/images/closefactor-logo.svg" width="180" alt="CloseFactor Logo" class="my-2" />
 
@@ -86,14 +91,14 @@
             <div class="years">2021-2023</div>
           </div>
           <ul>
-            <li>Eearly employee building out the core product</li> 
+            <li>Eearly employee building out the core product</li>
           </ul>
         </section>
       </div>
     </section>
 
     <section class="employer">
-      <div class="employer-ribbon" />
+      <div class="employer-ribbon"></div>
       <div>
         <img src="/images/google-logo.svg" width="180" alt="Google Logo" class="my-2" />
 
@@ -162,7 +167,7 @@
     </section>
 
     <section class="employer">
-      <div class="employer-ribbon !bg-[#CC0000]" />
+      <div class="employer-ribbon bg-[#CC0000]!"></div>
       <div>
         <img src="/images/canon-logo.svg" width="180" alt="Canon Logo" class="my-2" />
 
@@ -206,7 +211,7 @@
 </article>
 
 <style lang="scss">
-  @use '/src/styles/typography-mixins.scss';
+  @reference "../styles/global.css";
 
   .quick-links {
     a {
@@ -238,13 +243,13 @@
     }
 
     &-subtitle {
-      @include typography-mixins.text-label();
+      @apply text-label;
       @apply text-text-secondary;
       margin-bottom: 4px;
     }
 
     .years {
-      @include typography-mixins.text-label();
+      @apply text-label;
       @apply text-text-secondary;
     }
   }
@@ -253,11 +258,11 @@
     margin-bottom: 32px;
 
     &-title {
-      @include typography-mixins.text-h4();
+      @apply text-h4;
     }
 
     &-degree {
-      @include typography-mixins.text-label();
+      @apply text-label;
       @apply text-text-secondary;
     }
   }

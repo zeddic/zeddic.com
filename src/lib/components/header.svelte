@@ -38,9 +38,9 @@
 <section class={'header mt-8 md:mt-16 ' + className}>
   <!-- Name and Photo -->
   <header class="">
-    <a href="/" class="flex gap-2 items-center text-text-primary hover:text-ice-500 !no-underline">
+    <a href="/" class="flex gap-2 items-center text-text-primary hover:text-ice-500 no-underline!">
       <Logo class="w-[40px] transition-colors " />
-      <p class="!font-light text-h2 !text-text-primary">Scott Bailey</p>
+      <p class="font-light! text-h2 text-text-primary!">Scott Bailey</p>
     </a>
   </header>
 
@@ -59,15 +59,13 @@
   </nav>
 
   <!-- Mobile only nav sidebar toggle -->
-  <button type="button" class="nav-btn md:!hidden" on:click={onNavToggleClick}>
+  <button type="button" class="nav-btn md:hidden!" on:click={onNavToggleClick}>
     <Icon icon={open ? 'close' : 'menu'} size={36} />
   </button>
 </section>
 
 <style lang="scss">
-  @reference "../../styles/global.scss";
-  // @reference "tailwindcss"
-  // import '/src/styles/global.scss';
+  @reference "../../styles/global.css";
 
   .header {
     display: flex;
@@ -157,7 +155,7 @@
 
   // DESKTOP HEADER
 
-  @screen md {
+  @variant md {
     nav {
       background: initial;
       color: initial;

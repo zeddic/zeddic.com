@@ -1,0 +1,44 @@
+@config '../../tailwind.config.cjs';
+
+@import './utilities.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-family-header: var(--font-family);
+}
+
+@layer base {
+  body {
+    @apply text-body;
+    @apply text-text-primary;
+    @apply bg-canvas;
+  }
+
+  a {
+    @apply text-ice-600;
+    font-weight: 500;
+    text-decoration-line: underline;
+
+    &:hover {
+      @apply text-ice-700;
+      text-decoration-line: none;
+    }
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  h4 {
+    @apply text-h4;
+  }
+}

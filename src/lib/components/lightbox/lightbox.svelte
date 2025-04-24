@@ -1,6 +1,7 @@
 <script lang="ts">
   import {createEventDispatcher, onDestroy} from 'svelte';
   import {lightboxStore, type LightboxImage} from './lightbox-store';
+  import {Spring} from 'svelte/motion';
 
   // Renders a modal dialog with an image in side.
   // Allows images in a same image group to be incremented between.
@@ -40,7 +41,7 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="modal-container">
-  <div class="backdrop" on:click={close} aria-hidden="true" />
+  <div class="backdrop" on:click={close} aria-hidden="true"></div>
   <div class="modal" role="dialog" aria-modal="true">
     <!-- svelte-ignore a11y-autofocus -->
     <button type="button" autofocus on:click={close} aria-label="Close">
@@ -50,6 +51,8 @@
 </div>
 
 <style lang="scss">
+  @reference "../../../styles/global.css";
+
   .modal-container {
     position: fixed;
     place-items: center center;
